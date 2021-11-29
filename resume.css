@@ -1,0 +1,93 @@
+#animated_Id{
+    position: relative;
+    animation: commonFor 1s;
+    animation-fill-mode: forwards;   
+}
+
+@keyframes commonFor {
+    from {left: 0px;}
+    to {top: 100px;
+        /* background-image: linear-gradient( lightgreen, white);  */
+    }
+  }
+
+
+#name{
+ width: auto;
+ height: auto;
+ /* background-color: lightgreen; */
+ margin-left: 20%;
+ position: relative;
+ animation: mymove 3s;
+ animation-fill-mode: forwards;
+padding: 20px;}
+
+
+
+ #name_button
+ {
+    position: relative;
+    animation: mymove_button 3s;
+    animation-fill-mode: forwards;
+    border: 1px solid black;
+    /* background-image: linear-gradient(lightyellow, green); */
+    border-radius: 10px;
+    margin-top: 20px;
+    color: white;
+    margin-left: 25%;
+ }
+ @keyframes mymove {
+    from {top: 0px;}
+    to {top: 100px;
+        /* background-image: linear-gradient( lightgreen, white);  */
+    }
+  }
+
+  @keyframes mymove_button{
+    from {top: 0px;}
+    to {top: 100px; }
+     
+  }
+
+
+  #my_Image{
+      width: 300px;
+      border-radius: 50%;
+      position: relative;
+      /* top: 70%; */
+      display: block;
+      margin: 0 auto;
+      animation: my_Image 3s;
+    animation-fill-mode: forwards;
+  }
+
+
+  @keyframes my_Image{
+    from {top: 0px;}
+    to {top: 100px; }
+     
+  }
+
+  #hLine{
+      /* height: 50px; */
+      /* border: 0.1px solid black; */
+      color: cornflowerblue;
+      width: 130%;
+      margin-top: 50px;
+      margin-left: -12%;
+    position: relative;
+    animation: hLine 3s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes hLine{
+      
+    from {top: 0px;}
+    to {top: 100px; }
+     
+  }
+
+
+  #connecting_links{
+      margin-top: 100px;
+  }
