@@ -1,3 +1,7 @@
+html{
+  overflow-x: hidden;
+}
+
 #animated_Id{
     position: relative;
     animation: commonFor 1s;
@@ -16,7 +20,7 @@
  width: auto;
  height: auto;
  /* background-color: lightgreen; */
- margin-left: 20%;
+ margin-left: 18%;
  position: relative;
  animation: mymove 3s;
  animation-fill-mode: forwards;
@@ -89,5 +93,41 @@ padding: 20px;}
 
 
   #connecting_links{
-      margin-top: 100px;
+      margin-top: 120px;
   }
+
+  .social_medias{
+    color: black;
+    margin-left:10px;
+    list-style: none;
+    text-decoration: none;
+    }
+
+    .social_medias:hover{
+      color: red;
+      
+
+    }
+
+    .scroll-animations {
+      display: flex;
+    }
+
+    .scroll-animations div {
+      flex-grow: 1;
+      padding: 30px;
+      text-align: center;
+      opacity: 0;
+      color: #333;
+    }
+    
+    .scroll-animations div span {
+      font-size: 4em;
+      color: #5AA9E0;
+    }
+    
+    .scroll-animations div h3 {
+      font-size: 1.9em;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
