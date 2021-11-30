@@ -8,27 +8,73 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="./resume.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src=
+    "https://code.jquery.com/jquery-3.5.1.min.js">
+</script>
+<!-- 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet"> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-md-5">
-    <h1 id="name">Hi, <br> I'm <span style="color: brown;font-weight: 700;"> Rohit Sharma </span> Web Developer</h1>
+        <div class="row" style="z-index: -1;">
+            <div class="col-md-6">
+    <h1 id="name">Hi, <br> I'm <span style="color: red;font-weight: 700;"> Rohit Sharma </span> Web Developer</h1>
 
-    <button class="btn btn-danger" id="name_button">Contact Us</button>
+    <button class="btn btn-danger" id="name_button" onclick="myFunction()">Contact Us</button>
+
+
+    <!-- popup on clicking contact button -->
+    <div id="popup" class=" cross_class" onclick="">
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputName" class="form-label font-weight-bold">Name</label>
+                    <input type="text" class="form-control" id="exampleInputName" aria-describedby="NameHelp">
+                    
+                  </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label font-weight-bold">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">I'll never share your email with anyone else.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputNumber" class="form-label font-weight-bold">Phone Number</label>
+                <input type="number" class="form-control" id="exampleInputNumber" aria-describedby="NumberHelp">
+                <div id="NumberHelp" class="form-text">I'll never share your Number with anyone else.</div>
+              </div>
+
+            
+            
+           
+            <button type="submit" class="btn btn-primary " onclick="clossPopup()">Submit</button>
+          </form>
+    </div>
+
+    <!-- popup on clicking contact button end-->
+
 </div>
 
-<div class="col-md-7">
+<div class="col-md-6">
     <img src="./images/Rohit_sharma_photo.jpg" id="my_Image" alt="">
 </div>
 </div>
+
+
 <hr id="hLine">
 
 
 <div class="row" id="connecting_links">
     <div class="col-md-12">
         
-        <a href="https://www.linkedin.com/in/rohit-sharma-0389491b0/" class="social_medias">
+        <a href="https://www.linkedin.com/in/rohit-sharma-0389491b0/" target=“_blank” class="social_medias">
             <i class="fab fa-linkedin" ></i>  
         </a>
        
@@ -41,34 +87,32 @@
         </a>
     </div>
 </div>
-<!-- 
+
 <div class="row">
-    <div class="col-md-6">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae fugit blanditiis, quos unde impedit
-         sequi reiciendis voluptas quisquam quis, explicabo debitis, tenetur soluta distinctio asperiores ab
-          voluptatem culpa mollitia laborum ipsum ullam perspiciatis officia ea! Sequi, aliquid doloribus! 
-        Placeat nostrum numquam debitis libero reiciendis dolorum facere odio praesentium explicabo ducimus.
-    </div> -->
+    <div class="col-md-12">
+       <h1 id="about_Id">About Me</h1>
+    </div>
 
 
-    <div class="scroll-animations">
-        <div class="animated">
-          <span>&#9742;</span>
-          <h3>Number One</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis lacinia est. Nulla malesuada massa orci, vitae placerat lorem pharetra a.</p>
-        </div>
-        <div class="animated">
-          <span>&#9835;</span>
-          <h3>Number Two</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis lacinia est. Nulla malesuada massa orci, vitae placerat lorem pharetra a.</p>
-        </div>
-</div>
+  
 
 </div> <!-- container end -->
 
 
 
-<script src="./resume_JS.js"></script>
+<script>
+function myFunction() {
+     setTimeout(togglePopup,100);
+}
+    function togglePopup() {
+        $("#popup").show();
+        
+       }
+    function clossPopup(){
+    $(".cross_class").hide()}
+</script>
+
+
 
 </body>
 </html>

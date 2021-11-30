@@ -1,5 +1,10 @@
 html{
   overflow-x: hidden;
+  
+}
+
+*{
+  font-family: 'Noto Serif', serif;
 }
 
 #animated_Id{
@@ -24,7 +29,9 @@ html{
  position: relative;
  animation: mymove 3s;
  animation-fill-mode: forwards;
-padding: 20px;}
+padding: 20px;
+z-index: -1;
+}
 
 
 
@@ -34,11 +41,12 @@ padding: 20px;}
     animation: mymove_button 3s;
     animation-fill-mode: forwards;
     border: 1px solid black;
-    /* background-image: linear-gradient(lightyellow, green); */
     border-radius: 10px;
     margin-top: 20px;
     color: white;
     margin-left: 25%;
+    
+    cursor: pointer;
  }
  @keyframes mymove {
     from {top: 0px;}
@@ -108,26 +116,42 @@ padding: 20px;}
       
 
     }
-
-    .scroll-animations {
-      display: flex;
+    #about_Id{
+      animation-name: text_anim;
+      animation-duration: 4s;
+      position:relative;
+      margin-top: 50px;
+      animation-fill-mode: forwards;
+      
     }
 
-    .scroll-animations div {
-      flex-grow: 1;
-      padding: 30px;
-      text-align: center;
-      opacity: 0;
-      color: #333;
+
+    @keyframes text_anim {
+      from {left:0px;}
+      to {left:450px;text-decoration: underline;color: red;}
     }
-    
-    .scroll-animations div span {
-      font-size: 4em;
-      color: #5AA9E0;
+
+
+    /* contact form css  */
+
+    #popup{
+      z-index: 111111111;
+      /* background-color: aliceblue ; */
+      background: rgb(228, 59, 59);
+      background: rgba(142, 223, 131, 0.781);
+      border-radius: 30px;
+      padding: 20px;
+      position: relative;
+      left: 350px;
+      bottom: 130px;
+      display: none;
+      
     }
-    
-    .scroll-animations div h3 {
-      font-size: 1.9em;
-      font-weight: 400;
-      margin-bottom: 10px;
-    }
+
+
+    input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  }
+
+/* contact form css end */
