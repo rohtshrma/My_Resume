@@ -1,11 +1,19 @@
 html{
   overflow-x: hidden;
+  scroll-behavior: smooth;
   
+  
+}
+
+body{
+  background-color: rgb(235, 213, 217);
 }
 
 
 *{
   font-family: 'Noto Serif', serif;
+  padding: 0px;
+  margin: 0px;
 }
 
 #animated_Id{
@@ -48,6 +56,11 @@ z-index: -1;
     margin-left: 25%;
     
     cursor: pointer;
+ }
+
+ #name_button:hover{
+   background-color: #ed687c;
+   color: black;
  }
  @keyframes mymove {
     from {top: 0px;}
@@ -113,7 +126,7 @@ z-index: -1;
     }
 
     .social_medias:hover{
-      color: red;
+      color:#495d69;
       
 
     }
@@ -126,20 +139,25 @@ z-index: -1;
       
     }
 
+    
+    
+
 
     @keyframes text_anim {
       from {left:0px;}
       to {left:450px;text-decoration: underline;color: red;}
     }
 
+    
 
     /* contact form css  */
 
     #popup{
       z-index: 111111111;
       /* background-color: aliceblue ; */
-      background: rgb(228, 59, 59);
-      background: rgba(142, 223, 131, 0.781);
+      /* background: rgb(228, 59, 59); */
+      background: rgb(158, 218, 150);
+      width: 400px;
       border-radius: 30px;
       padding: 20px;
       position: relative;
@@ -147,6 +165,10 @@ z-index: -1;
       bottom: 130px;
       display: none;
       
+    }
+
+    #cross_img_id{
+      color: black;
     }
 
 
@@ -163,7 +185,9 @@ input::-webkit-inner-spin-button {
 
 #intro_id:hover{
 /* background-color: lightcyan; */
-font-weight: 700;}
+font-weight: 700;
+
+}
 
 
 /* progress bar css */
@@ -331,6 +355,32 @@ font-weight: 700;}
 
 }
 
+h1:hover{
+  color:blue;
+}
+i{
+  font-size: 25px;
+}
 #geeks:hover  {
   transform: scale(1.08);
+}
+
+#footer_Id{
+  background-color: rgb(145, 173, 173);
+  padding-bottom: 50px;
+}
+
+
+#contact_us_id{
+  margin-top: 100px;
+}
+
+#contact_form_last{
+  width: 400px;
+  margin-left: 30%;
+  padding: 20px;
+}
+
+#contact_form_last:hover{
+  transform: scale(1.009);
 }

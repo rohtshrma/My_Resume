@@ -23,8 +23,23 @@
 
 </head>
 <body>
-    <div class="container">
-        <div class="row" style="z-index: -1;">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 d-flex  justify-content-end" style="position: fixed;background-color: white;z-index: 1111111111;"  >
+            <h5 class="mx-4 mt-3" > <a href="#about_id_cont" class="text-decoration-none"> About Me </a></h5>
+            <h5  class="mx-4 mt-3"> <a href="#skills_id" class="text-decoration-none"> My Skills </a></h5>
+            <h5  class="mx-4 mt-3"> <a href="#work_id" class="text-decoration-none"> My Work </a></h5>
+            <h5  class="mx-4 mt-3 "> <a href="#contact_us_id"  class="text-decoration-none"> Contact Me </a></h5>
+        
+        </div>
+    </div>
+</div>
+
+    <div class="container" >
+        <!-- navigation bar -->
+      
+        <!-- navigation bar end -->
+        <div class="row" style="z-index: -1;margin-bottom:100px;">
             <div class="col-md-6">
     <h1 id="name">Hi, <br> I'm <span style="color: red;font-weight: 700;"> Rohit Sharma </span> Web Developer</h1>
 
@@ -32,8 +47,11 @@
 
 
     <!-- popup on clicking contact button -->
-    <div id="popup" class=" cross_class" onclick="">
+    <div id="popup" class=" cross_class" >
             <form>
+                <div class="col-md-12" style="padding-top: 10px; "  >
+                    <img src="./images/Group17.png" id="cross_img_id"  alt="" style="width: 12px;height: 12px;float: right;cursor: pointer;color: black;" onclick="clossPopup() ">
+                </div>
                 <div class="mb-3">
                     <label for="exampleInputName" class="form-label font-weight-bold">Name</label>
                     <input type="text" class="form-control" id="exampleInputName" aria-describedby="NameHelp">
@@ -42,16 +60,19 @@
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label font-weight-bold">Email address</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text">I'll never share your email with anyone else.</div>
+              <!-- <div id="emailHelp" class="form-text">I'll never share your email with anyone else.</div> -->
             </div>
 
             <div class="mb-3">
                 <label for="exampleInputNumber" class="form-label font-weight-bold">Phone Number</label>
                 <input type="number" class="form-control" id="exampleInputNumber" aria-describedby="NumberHelp">
-                <div id="NumberHelp" class="form-text">I'll never share your Number with anyone else.</div>
+                <!-- <div id="NumberHelp" class="form-text">I'll never share your Number with anyone else.</div> -->
               </div>
 
-            
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1" class="font-weight-bold">Type your Message</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
             
            
             <button type="submit" class="btn btn-primary " onclick="clossPopup()">Submit</button>
@@ -70,7 +91,7 @@
 
 <!-- <hr id="hLine"> -->
 
-
+<!-- 
 <div class="row" id="connecting_links">
     <div class="col-md-12">
         
@@ -86,19 +107,19 @@
             <i class="fab fa-instagram" st></i>
         </a>
     </div>
-</div>
+</div> -->
 
-<div class="row">
-    <div class="col-md-12">
-       <h1 id="about_Id">About Me</h1>
-       <p  id="intro_id" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ab voluptates repudiandae dolor excepturi doloremque cupiditate beatae dolorum adipisci iure, perspiciatis laboriosam. Fugit atque provident explicabo rerum? Sint illo labore ipsam cum eaque distinctio alias, quod voluptatibus. Corrupti quam ea dicta cumque obcaecati corporis aliquid aliquam asperiores porro praesentium? Debitis ratione cumque eligendi, quod ipsam odit nesciunt atque nihil voluptatem deserunt eaque culpa distinctio possimus, dolore, voluptates delectus et tempore tempora sunt in porro? Saepe autem consequatur alias, illum nam ea quae mollitia ut aperiam ullam odit aliquid consequuntur earum expedita voluptate rerum eos doloribus quibusdam cupiditate ducimus. Repellat, adipisci!</p>
+<div class="row mt-5">
+    <div class="col-md-12" id="about_id_cont">
+       <h1 id="about_Id" >About Me</h1>
+       <p  id="intro_id" >I have been working as a freelance designer and front-end developer since 2019.  I’ve always been someone who has both a creative and a logical side. When I discovered web design in college, I realized it would be the perfect fit. I could use my creative side to design and my logical side to code. As a bonus, being both designer and developer allows me to make sure no detail is lost in translation.</p>
     </div>
 </div>
 
 
 <!-- skills start -->
     <div class="row">
-        <div class="col-md-12 mb-5">
+        <div class="col-md-12 mb-5" id="skills_id">
             <h1 id="about_Id">My Skills</h1>
         </div>
 <!-- progress bar -->
@@ -150,7 +171,7 @@
 </div>
         </div>
 
-        <div class="col-md-4 col-sm-6 ">
+        <div class="col-md-4 col-sm-6 " id="react">
             <div class="progress yellow">
                 <span class="progress-left">
                     <span class="progress-bar"></span>
@@ -165,33 +186,97 @@
 <!-- skills end -->
 <!-- work section -->
 <div class="row">
-    <div class="col-md-12 mb-5">
+    <div class="col-md-12 mb-5" id="work_id">
        <h1 id="about_Id">My Work</h1>
        </div>
        <div class="col-md-4">
        <img src="./images/code-g610f8f1ee_1280.jpg" style="width: 300px;border-radius: 20px;" id="geeks">
     </div>
     <div class="col-md-4">
-        <img src="./images/code-g610f8f1ee_1280.jpg" style="width: 300px;border-radius: 20px;" id="geeks">
+        <img src="./images/laptop-g0fa1a159c_640.jpg" style="width: 300px;border-radius: 20px;" id="geeks">
      </div>
      <div class="col-md-4">
-        <img src="./images/code-g610f8f1ee_1280.jpg" style="width: 300px;border-radius: 20px;" id="geeks">
+        <img src="./images/programmer-g7826635a0_640.png" style="width: 300px;border-radius: 20px;" id="geeks">
      </div>
      <div class="col-md-4 mt-5">
-        <img src="./images/code-g610f8f1ee_1280.jpg" style="width: 300px;border-radius: 20px;" id="geeks">
+        <img src="./images/programmer-g7826635a0_640.png" style="width: 300px;border-radius: 20px;" id="geeks">
      </div>
      <div class="col-md-4 mt-5">
          <img src="./images/code-g610f8f1ee_1280.jpg" style="width: 300px;border-radius: 20px;" id="geeks">
       </div>
       <div class="col-md-4 mt-5">
-         <img src="./images/code-g610f8f1ee_1280.jpg" style="width: 300px;border-radius: 20px;" id="geeks">
-      </div>
+        <img src="./images/laptop-g0fa1a159c_640.jpg" style="width: 300px;border-radius: 20px;" id="geeks">
+     </div>
        </div>
 <!-- work section end-->
 
+<div class="row " id="contact_us_id"  >
+    
+    <div class="col-md-12">
+        <h1 id="about_Id" >Contact Me</h1>
+<form id="contact_form_last">
+    <div class="mb-3">
+        <label for="exampleInputName" class="form-label font-weight-bold">Name</label>
+        <input type="text" class="form-control" id="exampleInputName" aria-describedby="NameHelp">
+        
+      </div>
+<div class="mb-3">
+  <label for="exampleInputEmail1" class="form-label font-weight-bold">Email address</label>
+  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  <!-- <div id="emailHelp" class="form-text">I'll never share your email with anyone else.</div> -->
+</div>
+
+<div class="mb-3">
+    <label for="exampleInputNumber" class="form-label font-weight-bold">Phone Number</label>
+    <input type="number" class="form-control" id="exampleInputNumber" aria-describedby="NumberHelp">
+    <!-- <div id="NumberHelp" class="form-text">I'll never share your Number with anyone else.</div> -->
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1" class="font-weight-bold">Example textarea</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+
+
+<button type="submit" class="btn btn-primary " onclick="clossPopup()">Submit</button>
+</form>
+</div>
+<!-- <div class="col-md-4"></div> -->
+</div>
+
 </div> <!-- container end -->
 
+<!-- footr start -->
+<div class="container-fluid mt-5">
+    
+        <div class="row" id="footer_Id">
+            <div class="col-md-12"><h2 class="text-center mt-5 font-weight-bold">Rohit Sharma</h2></div>
 
+            <div class="col-md-4"></div>
+            <div class="col-md-4 text-center mt-3">
+                <a href="https://www.linkedin.com/in/rohit-sharma-0389491b0/" target=“_blank” class="social_medias">
+                    <i class="fab fa-linkedin" ></i>  
+                </a>
+               
+                <a href="https://github.com/rohtshrma" class="social_medias">
+                    <i class="fab fa-github"></i>
+                </a>
+        
+                <a href="https://www.instagram.com/himachali_baller/" class="social_medias" >
+                    <i class="fab fa-instagram" st></i>
+                </a>
+
+            </div>
+            <div class="col-md-4"></div>
+
+            <div class="col-md-12 text-center font-weight-bold mt-2 ">©  2021 copyright all right reserved</div>
+            
+        </div>
+        
+
+    
+</div>
+<!-- footer end -->
 
 <script>
 function myFunction() {
